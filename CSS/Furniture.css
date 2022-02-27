@@ -1,0 +1,270 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(228, 228, 228);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+ul, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.top, .bottom {
+    width: 100%;
+    height: 22px;
+    background-color: rgb(228, 228, 228);
+    z-index: 2;
+}
+.top {
+    position: fixed;
+    top: 0; left: 0;
+}
+.bottom {
+    position: fixed;
+    bottom: 0; left: 0;
+}
+#main {
+    background-color: white;
+    min-height: 603px;
+    width: calc(100% - 44px);
+    margin: 0 auto;
+}
+#main .eventclick {
+    width: 100%;
+    height: 340px;
+    background-color: rgb(44, 44, 44);
+    padding: 70px 80px 0 80px;
+    display: flex;
+}
+#main .maintxt {
+    width: calc(100% - 160px);
+    margin: 0 auto;
+    padding: 60px 0;
+}
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.logo a img {
+    height: 40px;
+}
+.logo span i {
+    font-size: 24px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.maintxt .content {
+    margin-top: 115px;
+    width: 100%;
+}
+.content .two-col {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.menu ul {
+    display: flex;
+    margin-top: 70px;
+}
+.menu ul li {
+    margin: 0 0 0 20px;
+}
+.menu ul li a {
+    padding: 2px 6px;
+    border-radius: 5px;
+}
+.menu ul li a.active {
+    color: orange;
+    background-color: black;
+    padding: 2px 6px;
+    border-radius: 5px;
+}
+.menu ul li a:hover {
+    color: orange;
+    background-color: black;
+}
+.menu ul li a {
+    color: gray;
+}
+.bigtxt {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.smalltxt {
+    color: gray;
+    line-height: 25px;
+}
+.content .multi-col {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.multi-col .one-col {
+    width: calc((100% - 60px) / 3);
+    height: 367px;
+    position: relative;
+    margin-bottom: 30px;
+}
+.multi-col .empty {
+    width: calc((100% - 60px) / 3);
+    height: 367px;
+    margin-bottom: 30px;
+}
+.one-col .layer1 {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 0; left: 0;
+    cursor: pointer;
+}
+.one-col .layer2 {
+    width: 100%;
+    top: 0; left: 0;
+    height: 300px;
+    position: absolute;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.multi-col .one-col:hover > .layer2 {
+    opacity: 0.6;
+}
+.one-col .layer3 {
+    position: absolute;
+    top: 100px; left: 135px;
+    opacity: 0;
+    cursor: pointer;
+}
+.multi-col .one-col:hover > .layer3 {
+    opacity: 1;
+}
+.one-col .layer4 {
+    position: absolute;
+    bottom: 25px; left: 0;
+    font-weight: 600;
+    color: rgb(92, 92, 92);
+    font-size: 20px;
+    cursor: pointer;
+}
+.one-col .layer5 {
+    position: absolute;
+    color: gray;
+    bottom: 0; left: 0;
+    cursor: pointer;
+}
+.multi-col .one-col > .layer5:hover {
+    color: orange;
+}
+#footer {
+    width: 100%;
+    background-color: rgb(228, 228, 228);
+    padding: 50px 0;
+}
+#footer ul.infor {
+    width: 31%;
+    display: flex;
+    margin: 0 auto 30px auto;
+}
+ul.infor li {
+    margin: 0 10px;
+}
+ul.infor li.in4-facebook a, ul.infor li.in4-twitter a, ul.infor li.in4-insta a, ul.infor li.in4-dribbble a, ul.infor li.in4-youtube a{ 
+    color: gray;
+}
+ul.infor li.in4-facebook a:hover,  ul.infor li.in4-twitter a:hover, ul.infor li.in4-insta a:hover{
+    color: blue;
+}
+ul.infor li.in4-dribbble a:hover {
+    color: rgb(158, 8, 33);
+}
+ul.infor li.in4-youtube a:hover {
+    color: red;
+}
+ul.final {
+    display: flex;
+    width: 28%;
+    margin: 0 auto;
+}
+ul.final li.end, ul.final li.end a{
+    color: gray;
+}
+ul.final li.end {
+    padding: 0 10px;
+}
+.border {
+    border-right: 1px solid gray;
+}
+ul.final li.end a:hover {
+    color: orange;
+}
+#buy {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    padding: 12px 20px;
+    background-color: black;
+    border-radius: 50px;
+    transition: 0.4s;
+}
+#buy span {
+    color: white;
+}
+#buy i {
+    color: green;
+    transition: 0.4s;
+}
+#buy:hover {
+    background-color: green;
+}
+#buy:hover a i {
+    color: white;
+}
+.eventclick #topleft, .eventclick #topmid, .eventclick #topright {
+    width: calc(100% / 3);
+}
+.js {
+    color: white;
+}
+li.txt, li.txt a {
+    margin: 10px 0;
+    color: gray;
+}
+li.txt a:hover {
+    transition: 0.4s;
+    color: white;
+    text-decoration: underline;
+}
+#topleft ul li h2.js {
+    font-weight: 400;
+}
+#topleft ul li h2.js:hover {
+    color: orange;
+    transition: 0.4s;
+    cursor: pointer;
+}
+#topmid .slide-show {
+    width: 255px;
+    height: 197px;
+    overflow: hidden;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.slide-show .chuyen-slide {
+    width: 9999px;
+    display: flex;
+    transition: 0.5s;
+}
+.chuyen-slide img {
+    width: 255px;
+    height: 197px;
+}
